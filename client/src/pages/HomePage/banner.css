@@ -1,0 +1,69 @@
+#app {
+    height: 100%;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Add this to make pagination positioning relative to the swiper */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination {
+    position: absolute; /* Make pagination absolute within the swiper */
+    top: 50%;
+    margin-left: 2rem; /* Adjust the distance from the right side */
+    transform: translateY(-50%); /* Center vertically */
+    display: flex; /* Stack bullets vertically */
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+
+
+    line-height: 28px;
+    font-size: 13px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 5px 0; /* Add vertical margin to separate bullets */
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #FF7F50;
+}

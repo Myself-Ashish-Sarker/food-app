@@ -59,7 +59,7 @@ const Navbar = () => {
                         </div>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end z-30">
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="">
