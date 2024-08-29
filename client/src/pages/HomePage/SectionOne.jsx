@@ -5,7 +5,7 @@ import "./SectionOne.css"
 const SectionOne = () => {
     return (
         <>
-            <div className="mt-24 flex justify-center gap-16">
+            <div className="mt-24 flex justify-center gap-16 pb-24">
                 <div>
                     <img className="rounded-md w-[30rem]" src={img} alt="section image" />
                 </div>

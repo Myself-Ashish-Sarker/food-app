@@ -2,6 +2,7 @@ import Banner from "./banner";
 import Card1 from "./Card1";
 import ImageCollction from "./ImageCollction";
 import SectionOne from "./SectionOne";
+import ShowcaseMenu from "./ShowcaseMenu";
 
 const HomePage = () => {
     return (
@@ -10,6 +11,7 @@ const HomePage = () => {
             <Card1 />
             <ImageCollction />
             <SectionOne />
+            <ShowcaseMenu />
         </div>
     );
 };
