@@ -16,6 +16,50 @@ const ShowcaseMenu = () => {
                 <div className="flex justify-center items-center">
                     <div>
                         {/*  */}
+                        <div className="flex items-center gap-5">
+                            <div>
+                                <img className="w-24" src={menu1} alt="" />
+                            </div>
+                            <div>
+                                <div className="flex items-center gap-2">
+                                    <h1 className="font-semibold">Cheese Noodles...</h1>
+                                    <div className="bg-red-400 px-2">
+                                        <h1 className="text-white">70 tk.</h1>
+                                    </div>
+                                </div>
+                                <p className="text-[0.7rem]">High Quality Meat</p>
+                                <div className="flex">
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                        </div>
+                        {/*  */}
+                        <div className="flex items-center gap-1">
+                            <div>
+                                <img className="w-24" src={menu1} alt="" />
+                            </div>
+                            <div>
+                                <div className="flex items-center gap-2">
+                                    <h1 className="font-semibold">Cheese Noodles...</h1>
+                                    <div className="bg-red-400 px-2">
+                                        <h1 className="text-white">70 tk.</h1>
+                                    </div>
+                                </div>
+                                <p className="text-[0.7rem]">High Quality Meat</p>
+                                <div className="flex">
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                        </div>
+                        {/*  */}
                         <div className="flex items-center gap-1">
                             <div>
                                 <img className="w-24" src={menu1} alt="" />
@@ -40,10 +84,76 @@ const ShowcaseMenu = () => {
                         {/*  */}
                     </div>
                     <div>
-                        <img className="w-72" src={img} alt="" />
+                        <img className="w-96" src={img} alt="" />
                     </div>
                     <div>
-                        <h1>Menu 1</h1>
+                        {/*  */}
+                        <div className="flex items-center gap-1">
+                            <div>
+                                <img className="w-24" src={menu1} alt="" />
+                            </div>
+                            <div>
+                                <div className="flex items-center gap-2">
+                                    <h1 className="font-semibold">Cheese Noodles...</h1>
+                                    <div className="bg-red-400 px-2">
+                                        <h1 className="text-white">70 tk.</h1>
+                                    </div>
+                                </div>
+                                <p className="text-[0.7rem]">High Quality Meat</p>
+                                <div className="flex">
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                        </div>
+                        {/*  */}
+                        <div className="flex items-center gap-1">
+                            <div>
+                                <img className="w-24" src={menu1} alt="" />
+                            </div>
+                            <div>
+                                <div className="flex items-center gap-2">
+                                    <h1 className="font-semibold">Cheese Noodles...</h1>
+                                    <div className="bg-red-400 px-2">
+                                        <h1 className="text-white">70 tk.</h1>
+                                    </div>
+                                </div>
+                                <p className="text-[0.7rem]">High Quality Meat</p>
+                                <div className="flex">
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                        </div>
+                        {/*  */}
+                        <div className="flex items-center gap-1">
+                            <div>
+                                <img className="w-24" src={menu1} alt="" />
+                            </div>
+                            <div>
+                                <div className="flex items-center gap-2">
+                                    <h1 className="font-semibold">Cheese Noodles...</h1>
+                                    <div className="bg-red-400 px-2">
+                                        <h1 className="text-white">70 tk.</h1>
+                                    </div>
+                                </div>
+                                <p className="text-[0.7rem]">High Quality Meat</p>
+                                <div className="flex">
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                        </div>
+                        {/*  */}
                     </div>
                 </div>
             </div>
