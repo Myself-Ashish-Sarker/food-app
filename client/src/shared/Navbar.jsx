@@ -73,7 +73,7 @@ const Navbar = () => {
                                 <Link className="justify-between">Profile</Link>
                             </li>
                             <li><Link>Settings</Link></li>
-                            <li><Link>Login</Link></li>
+                            <li><Link to="/login">Login</Link></li>
                         </ul>
                     </div>
                 </div>
