@@ -1,6 +1,7 @@
 import Banner from "./banner";
 import Card1 from "./Card1";
 import ImageCollction from "./ImageCollction";
+import ReservationBox from "./ReservationBox";
 import SectionOne from "./SectionOne";
 import ShowcaseMenu from "./ShowcaseMenu";
 
@@ -12,6 +13,7 @@ const HomePage = () => {
             <ImageCollction />
             <SectionOne />
             <ShowcaseMenu />
+            <ReservationBox />
         </div>
     );
 };

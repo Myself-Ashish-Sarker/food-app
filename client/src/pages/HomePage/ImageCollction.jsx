@@ -3,7 +3,7 @@ import img2 from "/image_collection/2.jpg";
 import img3 from "/image_collection/3.jpg";
 import img4 from "/image_collection/4.jpg";
 import img5 from "/image_collection/5.jpg";
-import "./ImageCollction.css"
+import "./font.css"
 
 const ImageCollction = () => {
     return (

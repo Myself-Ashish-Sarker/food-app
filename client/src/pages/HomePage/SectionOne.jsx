@@ -1,6 +1,6 @@
 import img from "/section_images/section1.jpg";
 import { TiTick } from "react-icons/ti";
-import "./SectionOne.css"
+import "./font.css"
 
 const SectionOne = () => {
     return (
