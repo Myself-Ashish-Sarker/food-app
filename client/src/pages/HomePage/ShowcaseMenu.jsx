@@ -1,20 +1,37 @@
 import img from "/showcase_menu/1.png";
 import menu1 from "/showcase_menu/menu1.png";
+import menu2 from "/showcase_menu/menu2.png";
+import menu3 from "/showcase_menu/menu3.png";
+import menu4 from "/showcase_menu/menu4.png";
+import menu5 from "/showcase_menu/menu5.png";
+import menu6 from "/showcase_menu/menu6.png";
 
 import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
+import { PiBreadFill } from "react-icons/pi";
+import { GiHotDog } from "react-icons/gi";
+import { PiBowlFoodFill } from "react-icons/pi";
 
 const ShowcaseMenu = () => {
     return (
         <div className='bg-[#f9f6f1]'>
             <div>
-                <div>
+                <div className="relative">
                     <h1 className='pt-10 lobster-two-bold text-center text-red-500 text-lg'>Popular Food Menu</h1>
                     <h1 className='text-5xl text-center pt-4 font-bold'>Choose Your Best Menu</h1>
+                    <div className="absolute left-40 top-16">
+                        <PiBreadFill className="text-[6rem] rotate-45 opacity-10 -z-20" />
+                    </div>
+                    <div className="absolute right-40 top-16">
+                        <GiHotDog className="text-[6rem] rotate-12 opacity-10 -z-20 re" />
+                    </div>
+                    <div className="absolute right-[20rem] top-[30rem]">
+                        <PiBowlFoodFill className="text-[6rem] rotate-12 opacity-10 -z-20 re" />
+                    </div>
                 </div>
 
                 <div className="flex justify-center items-center">
-                    <div>
+                    <div className="flex flex-col gap-1">
                         {/*  */}
                         <div className="flex items-center gap-5">
                             <div>
@@ -29,13 +46,16 @@ const ShowcaseMenu = () => {
                                 </div>
                                 <p className="text-[0.7rem]">High Quality Meat</p>
                                 <div className="flex">
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaRegStar />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaRegStar className="text-red-500" />
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <hr />
                         </div>
                         {/*  */}
                         <div className="flex items-center gap-1">
@@ -51,13 +71,16 @@ const ShowcaseMenu = () => {
                                 </div>
                                 <p className="text-[0.7rem]">High Quality Meat</p>
                                 <div className="flex">
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaRegStar />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaRegStar className="text-red-500" />
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <hr />
                         </div>
                         {/*  */}
                         <div className="flex items-center gap-1">
@@ -73,11 +96,11 @@ const ShowcaseMenu = () => {
                                 </div>
                                 <p className="text-[0.7rem]">High Quality Meat</p>
                                 <div className="flex">
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaRegStar />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaRegStar className="text-red-500" />
                                 </div>
                             </div>
                         </div>
@@ -101,13 +124,16 @@ const ShowcaseMenu = () => {
                                 </div>
                                 <p className="text-[0.7rem]">High Quality Meat</p>
                                 <div className="flex">
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaRegStar />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaRegStar className="text-red-500" />
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <hr />
                         </div>
                         {/*  */}
                         <div className="flex items-center gap-1">
@@ -123,13 +149,16 @@ const ShowcaseMenu = () => {
                                 </div>
                                 <p className="text-[0.7rem]">High Quality Meat</p>
                                 <div className="flex">
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaRegStar />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaRegStar className="text-red-500" />
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <hr />
                         </div>
                         {/*  */}
                         <div className="flex items-center gap-1">
@@ -145,11 +174,11 @@ const ShowcaseMenu = () => {
                                 </div>
                                 <p className="text-[0.7rem]">High Quality Meat</p>
                                 <div className="flex">
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaStar />
-                                    <FaRegStar />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaStar className="text-red-500" />
+                                    <FaRegStar className="text-red-500" />
                                 </div>
                             </div>
                         </div>
