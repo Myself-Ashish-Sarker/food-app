@@ -6,7 +6,8 @@ import { FaHome } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
@@ -28,6 +29,9 @@ const Login = () => {
                 setTimeout(() => {
                     navigate("/");
                 }, 2000);
+                toast.success("Success Notification !", {
+                    position: "top-right"
+                });
             })
             .catch(err => {
                 console.log(err.message);
@@ -96,6 +100,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer autoClose={2000} />
         </div>
     );
 };
