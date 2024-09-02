@@ -2,8 +2,31 @@ import img1 from "/login/1.jpg";
 import { Link } from "react-router-dom";
 
 import { RiBreadLine } from "react-icons/ri";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
+
+    const {logIn} = useContext(AuthContext);
+
+    const handleLogin = e => {
+        e.preventDefault();
+
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        const logLog = {email, password};
+        console.log(logLog);
+
+        logIn(email, password)
+            .then(res => {
+                console.log(res.user);
+            })
+            .catch(err => {
+                console.log(err.message);
+            })
+    }
+
     return (
         <div>
             <div className="relative">
@@ -15,18 +38,18 @@ const Login = () => {
                         <div className="bg-white">
                             <div className="bg-base-100 w-[22rem] shadow-xl">
                                 <h1 className="pt-8 text-2xl text-center font-semibold">Login</h1>
-                                <form className="card-body">
+                                <form onSubmit={handleLogin} className="card-body">
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Email</span>
                                         </label>
-                                        <input type="email" placeholder="email" className="input input-bordered" required />
+                                        <input type="email" placeholder="email" className="input input-bordered" name="email" required />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type="password" placeholder="password" className="input input-bordered" required />
+                                        <input type="password" placeholder="password" className="input input-bordered" name="password" required />
                                     </div>
                                     <div>
                                         <h1>Don't have a Account? <Link to="/register">Register</Link></h1>
