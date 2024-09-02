@@ -4,8 +4,12 @@ import img1 from "/register/register.jpg"
 
 import { RiBreadLine } from "react-icons/ri";
 import { FaHome } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
+
+    const { createUser } = useContext(AuthContext);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -16,6 +20,18 @@ const Register = () => {
 
         const regRes = { name, email, password };
         console.log(regRes);
+
+        createUser(email, password)
+            .then (res => {
+                const {user} = res;
+                const uid = res.uid;
+
+                console.log(res.user);
+
+            })
+            .catch (err => {
+                console.log(err.message);
+            })
     }
     return (
         <div>
@@ -66,7 +82,7 @@ const Register = () => {
                                     <h1>Already have a Account? <Link to="/login">Login</Link></h1>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Login</button>
+                                    <button className="btn btn-primary">Register</button>
                                 </div>
                             </form>
                         </div>

@@ -12,17 +12,17 @@ const AuthProvider = ({children}) => {
 
     const createUser = (email, password) => {
         setLoading(true);
-        createUserWithEmailAndPassword(auth, email, password);
+        return createUserWithEmailAndPassword(auth, email, password);
     };
 
     const logIn = (email, password) => {
         setLoading(true);
-        signInWithEmailAndPassword(auth, email, password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     const logOut = () => {
         setLoading(true);
-        signOut(auth);
+        return signOut(auth);
     }
 
     const delUser = (email, password) => {
