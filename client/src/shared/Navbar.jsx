@@ -5,11 +5,17 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const location = useLocation();
     const pathname = location.pathname;
     console.log(pathname);
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const links = [
         {
@@ -80,7 +86,7 @@ const Navbar = () => {
                             {
                                 user
                                     ?
-                                    <li><Link>Log Out</Link></li>
+                                    <li onClick={handleLogOut}><Link>Log Out</Link></li>
                                     :
                                     <li><Link to="/login">Login</Link></li>
                             }
