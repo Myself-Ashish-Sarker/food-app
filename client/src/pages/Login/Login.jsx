@@ -1,13 +1,17 @@
 import img1 from "/login/1.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { RiBreadLine } from "react-icons/ri";
+import { FaHome } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
+
+
 const Login = () => {
 
-    const {logIn} = useContext(AuthContext);
+    const { logIn } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -15,12 +19,15 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        const logLog = {email, password};
+        const logLog = { email, password };
         console.log(logLog);
 
         logIn(email, password)
             .then(res => {
                 console.log(res.user);
+                setTimeout(() => {
+                    navigate("/");
+                }, 2000);
             })
             .catch(err => {
                 console.log(err.message);
@@ -31,8 +38,15 @@ const Login = () => {
         <div>
             <div className="relative">
                 {/* <img className="absolute -right-6 w-24" src={img1} alt="" /> */}
-                <img className="object-fill h-screen w-screen opacity-40" src={img1} alt="" />
-
+                <img className="object-cover h-screen w-screen opacity-40" src={img1} alt="" />
+                <div className="absolute top-5 right-5 z-30">
+                    <Link to="/">
+                        <button className="cursor-pointer px-4 py-2 rounded-md bg-slate-900 text-white items-center flex gap-2">
+                            <FaHome className="text-xl" />
+                            <p className="pt-1">Home</p>
+                        </button>
+                    </Link>
+                </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="flex justify-center gap-24">
                         <div className="bg-white">
