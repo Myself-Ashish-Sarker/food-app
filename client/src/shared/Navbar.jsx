@@ -1,7 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Navbar = () => {
+
+    const { user } = useContext(AuthContext);
 
     const location = useLocation();
     const pathname = location.pathname;
@@ -73,7 +77,13 @@ const Navbar = () => {
                                 <Link className="justify-between">Profile</Link>
                             </li>
                             <li><Link>Settings</Link></li>
-                            <li><Link to="/login">Login</Link></li>
+                            {
+                                user
+                                    ?
+                                    <li><Link>Log Out</Link></li>
+                                    :
+                                    <li><Link to="/login">Login</Link></li>
+                            }
                         </ul>
                     </div>
                 </div>
