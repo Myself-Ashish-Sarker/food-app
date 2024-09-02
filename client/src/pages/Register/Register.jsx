@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img1 from "/register/register.jpg"
 
 
@@ -10,6 +10,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Register = () => {
 
     const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -25,14 +26,16 @@ const Register = () => {
             .then (res => {
                 const {user} = res;
                 const uid = res.uid;
-
                 console.log(res.user);
-
+                setTimeout(() => {
+                    navigate("/")
+                }, 2000);
             })
             .catch (err => {
                 console.log(err.message);
             })
     }
+
     return (
         <div>
             <div className="relative">
