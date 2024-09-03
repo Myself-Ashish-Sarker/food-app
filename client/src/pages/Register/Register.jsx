@@ -33,6 +33,9 @@ const Register = () => {
                 setTimeout(() => {
                     navigate("/")
                 }, 2000);
+                toast.success("Successfully Registered!", {
+                    position: "top-right"
+                });
             })
             .catch (err => {
                 console.log(err.message);

@@ -3,13 +3,20 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { RiBreadLine } from "react-icons/ri";
 import { FaHome } from "react-icons/fa";
+
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { fetchSignInMethodsForEmail, getAuth } from "firebase/auth";
+import { app } from "../../firebase/firebase.config";
+
 const Login = () => {
+
+    const auth = getAuth(app)
 
     const { logIn } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -34,8 +41,9 @@ const Login = () => {
                 });
             })
             .catch(err => {
-                console.log(err.message);
+                console.log(err);
             })
+
     }
 
     return (
