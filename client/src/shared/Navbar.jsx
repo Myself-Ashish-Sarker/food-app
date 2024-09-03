@@ -3,6 +3,10 @@ import { BsPersonCircle } from "react-icons/bs";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
@@ -13,8 +17,14 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then()
-            .catch()
+            .then(() => {
+                toast.success("Successfully Looged Out!", {
+                    position: "top-right"
+                });
+            })
+            .catch(err => {
+                console.log(err.message);
+            })
     }
 
     const links = [
@@ -94,6 +104,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer autoClose={2000} />
         </div>
     );
 };

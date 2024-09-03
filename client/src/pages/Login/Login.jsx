@@ -29,7 +29,7 @@ const Login = () => {
                 setTimeout(() => {
                     navigate("/");
                 }, 2000);
-                toast.success("Success Notification !", {
+                toast.success("Successfully Logged In!", {
                     position: "top-right"
                 });
             })
