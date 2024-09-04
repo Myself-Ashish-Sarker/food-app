@@ -15,7 +15,7 @@ const Register = () => {
     const { createUser } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -24,22 +24,21 @@ const Register = () => {
 
         const regRes = { name, email, password };
         console.log(regRes);
-
-        createUser(email, password)
-            .then (res => {
-                const {user} = res;
-                const uid = res.uid;
-                console.log(res.user);
-                setTimeout(() => {
-                    navigate("/")
-                }, 2000);
-                toast.success("Successfully Registered!", {
-                    position: "top-right"
-                });
-            })
-            .catch (err => {
-                console.log(err.message);
-            })
+        
+        try {
+            await createUser(email, password);
+            setTimeout(() => {
+                navigate("/")
+            }, 2000);
+            toast.success("Successfully Registered!", {
+                position: "top-right"
+            });
+        } catch (err) {
+            console.log(err.message);
+            toast.error("Failed!", {
+                position: "top-right"
+            });
+        }
     }
 
     return (

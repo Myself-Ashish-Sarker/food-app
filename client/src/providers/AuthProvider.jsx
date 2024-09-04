@@ -1,6 +1,9 @@
 import { createUserWithEmailAndPassword, deleteUser, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
 import { createContext, useEffect, useState } from "react";
+import useAxiosPublic from "../hooks/useAxiosPublic";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const auth = getAuth(app);
 export const AuthContext = createContext(null)
@@ -9,10 +12,16 @@ const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const axiosPublic = useAxiosPublic();
 
-    const createUser = (email, password) => {
-        setLoading(true);
-        return createUserWithEmailAndPassword(auth, email, password);
+
+    const createUser = async (email, password) => {
+        // setLoading(true);
+        // return createUserWithEmailAndPassword(auth, email, password);
+
+        const newUser = {email, password};
+        const response = await axiosPublic.post("/users", newUser);
+        return response.data;
     };
 
     const logIn = (email, password) => {

@@ -25,7 +25,23 @@ const client = new MongoClient(uri, {
 });
 
 async function run() {
+
+    const userCollection = client.db("food-app").collection("users");
+
     try {
+
+        // api for user
+        app.post("/users", async (req, res) => {
+            const user = req.body;
+            const email = user.email;
+            const existingUser = await userCollection.findOne({ email });
+            if (existingUser) {
+                return res.status(409).json({ message: "user already exists" })
+            };
+            await userCollection.insertOne(user);
+            res.status(201).json({message: "user created Succesfully"})
+        })
+        // api for user
 
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
     } finally {
